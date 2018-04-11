@@ -5,6 +5,6 @@ Swift is a general-purpose, multi-paradigm, compiled programming language develo
 
 [swift.org](https://swift.org/)
 
-[Swift GitHub Repository](https://github.com/apple/swift)
+[Swift Source Code GitHub Repository](https://github.com/apple/swift)
 
 This Repository contains a series of Swift examples to help someone new to Swift learn how to program in Swift.
