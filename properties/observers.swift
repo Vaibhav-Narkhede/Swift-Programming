@@ -1,4 +1,7 @@
 print("-----Property Observer-----")
+//willSet is called just before the value is stored.
+//didSet is called immediately after the new value is stored.
+
 struct Person {
     var clothes: String {
         willSet {
