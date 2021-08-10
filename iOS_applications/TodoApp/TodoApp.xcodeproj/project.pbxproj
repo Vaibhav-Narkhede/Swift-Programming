@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		DB51F73026C0FBD000E7C70C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		DB8039E426C0EA1300F92FD1 /* SwiftTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB8039E426C0EA1300F92FD1 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8039E726C0EA1300F92FD1 /* SwiftTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTodoApp.swift; sourceTree = "<group>"; };
 		DB8039E926C0EA1300F92FD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB8039EB26C0EA1400F92FD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		DB8039DB26C0EA1300F92FD1 = {
 			isa = PBXGroup;
 			children = (
-				DB8039E626C0EA1300F92FD1 /* SwiftTodo */,
+				DB8039E626C0EA1300F92FD1 /* TodoApp */,
 				DB8039E526C0EA1300F92FD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		DB8039E526C0EA1300F92FD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB8039E426C0EA1300F92FD1 /* SwiftTodo.app */,
+				DB8039E426C0EA1300F92FD1 /* TodoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB8039E626C0EA1300F92FD1 /* SwiftTodo */ = {
+		DB8039E626C0EA1300F92FD1 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
 				DB8039E726C0EA1300F92FD1 /* SwiftTodoApp.swift */,
@@ -61,7 +61,7 @@
 				DB8039ED26C0EA1400F92FD1 /* Preview Content */,
 				DB51F73026C0FBD000E7C70C /* DataStore.swift */,
 			);
-			path = SwiftTodo;
+			path = TodoApp;
 			sourceTree = "<group>";
 		};
 		DB8039ED26C0EA1400F92FD1 /* Preview Content */ = {
@@ -75,9 +75,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB8039E326C0EA1300F92FD1 /* SwiftTodo */ = {
+		DB8039E326C0EA1300F92FD1 /* TodoApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB8039F326C0EA1400F92FD1 /* Build configuration list for PBXNativeTarget "SwiftTodo" */;
+			buildConfigurationList = DB8039F326C0EA1400F92FD1 /* Build configuration list for PBXNativeTarget "TodoApp" */;
 			buildPhases = (
 				DB8039E026C0EA1300F92FD1 /* Sources */,
 				DB8039E126C0EA1300F92FD1 /* Frameworks */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftTodo;
+			name = TodoApp;
 			productName = SwiftTodo;
-			productReference = DB8039E426C0EA1300F92FD1 /* SwiftTodo.app */;
+			productReference = DB8039E426C0EA1300F92FD1 /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DB8039DF26C0EA1300F92FD1 /* Build configuration list for PBXProject "SwiftTodo" */;
+			buildConfigurationList = DB8039DF26C0EA1300F92FD1 /* Build configuration list for PBXProject "TodoApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB8039E326C0EA1300F92FD1 /* SwiftTodo */,
+				DB8039E326C0EA1300F92FD1 /* TodoApp */,
 			);
 		};
 /* End PBXProject section */
@@ -272,16 +272,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftTodo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
 				DEVELOPMENT_TEAM = MTSN54VWHL;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftTodo/Info.plist;
+				INFOPLIST_FILE = TodoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.VNProgrammer.SwiftTodo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VNProgrammer.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,16 +294,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftTodo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
 				DEVELOPMENT_TEAM = MTSN54VWHL;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftTodo/Info.plist;
+				INFOPLIST_FILE = TodoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.VNProgrammer.SwiftTodo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VNProgrammer.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB8039DF26C0EA1300F92FD1 /* Build configuration list for PBXProject "SwiftTodo" */ = {
+		DB8039DF26C0EA1300F92FD1 /* Build configuration list for PBXProject "TodoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB8039F126C0EA1400F92FD1 /* Debug */,
@@ -322,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB8039F326C0EA1400F92FD1 /* Build configuration list for PBXNativeTarget "SwiftTodo" */ = {
+		DB8039F326C0EA1400F92FD1 /* Build configuration list for PBXNativeTarget "TodoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB8039F426C0EA1400F92FD1 /* Debug */,
