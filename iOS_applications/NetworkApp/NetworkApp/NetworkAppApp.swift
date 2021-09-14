@@ -1,14 +1,14 @@
 //
-//  SwiftUI_GRDBApp.swift
-//  SwiftUI_GRDB
+//  NetworkAppApp.swift
+//  NetworkApp
 //
-//  Created by VNProgrammer on 10/09/21.
+//  Created by Orion on 14/09/21.
 //
 
 import SwiftUI
 
 @main
-struct SwiftUI_GRDBApp: App {
+struct NetworkAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

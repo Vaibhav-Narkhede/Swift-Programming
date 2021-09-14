@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		DBDDD65226EB0E3200ABA189 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDD65126EB0E3200ABA189 /* ContentView.swift */; };
 		DBDDD65426EB0E3300ABA189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDDD65326EB0E3300ABA189 /* Assets.xcassets */; };
 		DBDDD65726EB0E3300ABA189 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDDD65626EB0E3300ABA189 /* Preview Assets.xcassets */; };
+		DBDDD66026EB0FC100ABA189 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DBDDD65F26EB0FC100ABA189 /* GRDB */; };
+		DBDDD66226EB10FF00ABA189 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDD66126EB10FF00ABA189 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		DBDDD65326EB0E3300ABA189 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBDDD65626EB0E3300ABA189 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBDDD65826EB0E3300ABA189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDDD66126EB10FF00ABA189 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDDD66026EB0FC100ABA189 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 				DBDDD65326EB0E3300ABA189 /* Assets.xcassets */,
 				DBDDD65826EB0E3300ABA189 /* Info.plist */,
 				DBDDD65526EB0E3300ABA189 /* Preview Content */,
+				DBDDD66126EB10FF00ABA189 /* DBManager.swift */,
 			);
 			path = SwiftUI_GRDB;
 			sourceTree = "<group>";
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = SwiftUI_GRDB;
+			packageProductDependencies = (
+				DBDDD65F26EB0FC100ABA189 /* GRDB */,
+			);
 			productName = SwiftUI_GRDB;
 			productReference = DBDDD64C26EB0E3200ABA189 /* SwiftUI_GRDB.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +120,9 @@
 				Base,
 			);
 			mainGroup = DBDDD64326EB0E3200ABA189;
+			packageReferences = (
+				DBDDD65E26EB0FC100ABA189 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = DBDDD64D26EB0E3200ABA189 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBDDD65226EB0E3200ABA189 /* ContentView.swift in Sources */,
+				DBDDD66226EB10FF00ABA189 /* DBManager.swift in Sources */,
 				DBDDD65026EB0E3200ABA189 /* SwiftUI_GRDBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,9 +279,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_GRDB/Preview Content\"";
-				DEVELOPMENT_TEAM = 38R282VT77;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUI_GRDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -279,6 +291,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.VNProgrammer.SwiftUI-GRDB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,9 +302,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_GRDB/Preview Content\"";
-				DEVELOPMENT_TEAM = 38R282VT77;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUI_GRDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -301,6 +314,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.VNProgrammer.SwiftUI-GRDB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBDDD65E26EB0FC100ABA189 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBDDD65F26EB0FC100ABA189 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBDDD65E26EB0FC100ABA189 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBDDD64426EB0E3200ABA189 /* Project object */;
 }
