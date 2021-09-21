@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AR4-pa-oGL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Receiver-->
+        <scene sceneID="l05-X0-VgQ">
+            <objects>
+                <viewController title="Sender" id="AR4-pa-oGL" userLabel="Receiver" customClass="ReceiverVC" customModule="ProtocolDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1I6-Ra-PQw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received -:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew1-rd-hw4">
+                                <rect key="frame" x="16" y="118" width="382" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzQ-Ql-4Gk">
+                                <rect key="frame" x="157" y="160.5" width="100" height="44"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0fd-HZ-ZIf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="aFD-ug-2z3"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Get Data"/>
+                                <connections>
+                                    <segue destination="Pl0-Zr-Lqf" kind="show" identifier="GetDataSegue" id="ivR-iC-hQR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receiver (First VC)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLH-et-2XA">
+                                <rect key="frame" x="94" y="68" width="226" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK0-yk-UbN">
+                                <rect key="frame" x="12" y="220.5" width="390" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="vTD-Ek-diK"/>
+                                </constraints>
+                                <string key="text">Protocol Implementer -
+
+extension ReceiverVC: MyProtocolDelegate{    
+    func SendData(data: String) {
+        print("received delegate event from sender")
+        lblData.text = "Received -: \(data)"
+    }
+}</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sfv-0W-0pi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nzQ-Ql-4Gk" firstAttribute="top" secondItem="Ew1-rd-hw4" secondAttribute="bottom" constant="16" id="Ans-xV-fdL"/>
+                            <constraint firstItem="nzQ-Ql-4Gk" firstAttribute="centerX" secondItem="sfv-0W-0pi" secondAttribute="centerX" id="Esq-lm-DJW"/>
+                            <constraint firstItem="sfv-0W-0pi" firstAttribute="trailing" secondItem="Ew1-rd-hw4" secondAttribute="trailing" constant="16" id="Gn3-Jv-yxx"/>
+                            <constraint firstItem="Ew1-rd-hw4" firstAttribute="leading" secondItem="sfv-0W-0pi" secondAttribute="leading" constant="16" id="IJB-hx-H4M"/>
+                            <constraint firstItem="Ew1-rd-hw4" firstAttribute="top" secondItem="RLH-et-2XA" secondAttribute="bottom" constant="16" id="IwM-xs-vxl"/>
+                            <constraint firstItem="sfv-0W-0pi" firstAttribute="trailing" secondItem="FK0-yk-UbN" secondAttribute="trailing" constant="12" id="OhV-IR-Het"/>
+                            <constraint firstItem="FK0-yk-UbN" firstAttribute="top" secondItem="nzQ-Ql-4Gk" secondAttribute="bottom" constant="16" id="esJ-TN-qpR"/>
+                            <constraint firstItem="RLH-et-2XA" firstAttribute="centerX" secondItem="sfv-0W-0pi" secondAttribute="centerX" id="lOM-kb-R1G"/>
+                            <constraint firstItem="RLH-et-2XA" firstAttribute="top" secondItem="sfv-0W-0pi" secondAttribute="top" constant="24" id="pj3-ps-8Yh"/>
+                            <constraint firstItem="FK0-yk-UbN" firstAttribute="leading" secondItem="sfv-0W-0pi" secondAttribute="leading" constant="12" id="qme-oV-DKs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Receiver" id="4Rb-2h-cfw"/>
+                    <connections>
+                        <outlet property="lblData" destination="Ew1-rd-hw4" id="wwV-Dc-uWL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9it-9w-4KN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="98.4375"/>
+        </scene>
+        <!--Sender-->
+        <scene sceneID="iOy-Ex-E4h">
+            <objects>
+                <viewController title="Receiver" id="Pl0-Zr-Lqf" userLabel="Sender" customClass="SenderVC" customModule="ProtocolDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n9u-b0-Tpx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-48-I7z">
+                                <rect key="frame" x="157" y="124" width="100" height="44"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="I5x-bM-72v"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="f4L-5r-tBr"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Send Data"/>
+                                <connections>
+                                    <action selector="btnSendDataTouched:" destination="Pl0-Zr-Lqf" eventType="touchUpInside" id="at2-du-Qbd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text to sent back to Receiver " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I3f-fz-RFC">
+                                <rect key="frame" x="16" y="74" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="n9u-b0-Tpx" id="ZRG-iT-TLE"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender (Second VC)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-Xy-wJo">
+                                <rect key="frame" x="83" y="24" width="248" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrR-sZ-zjZ">
+                                <rect key="frame" x="12" y="184" width="414" height="340"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="vvT-vA-OHw"/>
+                                </constraints>
+                                <string key="text">Protocol Delegate Instance -
+
+var delegate: MyProtocolDelegate?
+
+@IBAction func btnSendDataTouched(_ sender: Any){
+    let strData = self.txtData.text
+    if self.delegate != nil &amp;&amp; strData != nil{
+        print("sending delegate event to receiver")
+        delegate?.SendData(data: strData!)
+        dismiss(animated: true, completion: nil)
+    }
+}</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BJv-LT-cxL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I3f-fz-RFC" firstAttribute="top" secondItem="sMx-Xy-wJo" secondAttribute="bottom" constant="16" id="AwS-h4-iV2"/>
+                            <constraint firstItem="I3f-fz-RFC" firstAttribute="leading" secondItem="BJv-LT-cxL" secondAttribute="leading" constant="16" id="LcL-bR-gRm"/>
+                            <constraint firstItem="Wob-48-I7z" firstAttribute="centerX" secondItem="BJv-LT-cxL" secondAttribute="centerX" id="N0s-QC-8Tt"/>
+                            <constraint firstItem="wrR-sZ-zjZ" firstAttribute="leading" secondItem="BJv-LT-cxL" secondAttribute="leading" constant="12" id="SOe-3s-zDn"/>
+                            <constraint firstItem="sMx-Xy-wJo" firstAttribute="centerX" secondItem="BJv-LT-cxL" secondAttribute="centerX" id="b8o-c9-Jd9"/>
+                            <constraint firstItem="wrR-sZ-zjZ" firstAttribute="top" secondItem="Wob-48-I7z" secondAttribute="bottom" constant="16" id="hRo-WA-dzl"/>
+                            <constraint firstItem="Wob-48-I7z" firstAttribute="top" secondItem="I3f-fz-RFC" secondAttribute="bottom" constant="16" id="kpf-9U-1Jc"/>
+                            <constraint firstItem="wrR-sZ-zjZ" firstAttribute="trailing" secondItem="BJv-LT-cxL" secondAttribute="trailing" constant="12" id="phw-LB-27O"/>
+                            <constraint firstItem="BJv-LT-cxL" firstAttribute="trailing" secondItem="I3f-fz-RFC" secondAttribute="trailing" constant="16" id="wqX-dQ-a4k"/>
+                            <constraint firstItem="sMx-Xy-wJo" firstAttribute="top" secondItem="BJv-LT-cxL" secondAttribute="top" constant="24" id="yOy-sy-Jh3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sender" id="VTo-Sx-eAW"/>
+                    <connections>
+                        <outlet property="txtData" destination="I3f-fz-RFC" id="Wt3-EL-SLf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIh-VN-uy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618.840579710145" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
