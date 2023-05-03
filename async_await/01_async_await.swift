@@ -26,7 +26,7 @@ func printUserDetailsSerially() async {
     let username = await getUser()
     let scores = await getHighScores()
     let friends = await getFriends()
-
+    
     let user = UserData(name: username, friends: friends, highScores: scores)
     print("Hello, my name is \(user.name), and I have \(user.friends.count) friends!")
 }
@@ -36,7 +36,7 @@ func printUserDetailsConcurrenty() async {
     async let username = getUser()
     async let scores = getHighScores()
     async let friends = getFriends()
-
+    
     let user = await UserData(name: username, friends: friends, highScores: scores)
     print("Hello, my name is \(user.name), and I have \(user.friends.count) friends!")
 }
@@ -49,7 +49,7 @@ let serailExecutionTime  = await clock.measure {
 print(serailExecutionTime)
 
 let concurrentExecutionTime = await clock.measure {
-await printUserDetailsConcurrenty()
+    await printUserDetailsConcurrenty()
 }
 print(concurrentExecutionTime)
 
@@ -57,10 +57,10 @@ print(concurrentExecutionTime)
 //await printUserDetailsConcurrenty()
 
 /* output
-printUserDetailsSerially()
-Hello, my name is Sam, and I have 3 friends!
-3.007828155 seconds
-printUserDetailsConcurrenty()
-Hello, my name is Sam, and I have 3 friends!
-1.000527633 seconds
-*/
+ printUserDetailsSerially()
+ Hello, my name is Sam, and I have 3 friends!
+ 3.007828155 seconds
+ printUserDetailsConcurrenty()
+ Hello, my name is Sam, and I have 3 friends!
+ 1.000527633 seconds
+ */
